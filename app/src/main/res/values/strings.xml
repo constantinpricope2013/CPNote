@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CPNote</string>
+    <string name="go_to_notes">Go to Notes</string>
+    <string name="textview">TextView</string>
+</resources>
