@@ -2,4 +2,13 @@
     <string name="app_name">CPNote</string>
     <string name="go_to_notes">Go to Notes</string>
     <string name="textview">TextView</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="adauga_o_noua_notita_in_casuta_de_mai_jos_pentru_a_fi_salvata_in_baza_de_date_sau_intr_un_fisier_stocat_pe_dispozitiv">Adauga o noua notita in casuta de mai jos pentru a fi salvata in Baza de date sau intr un fisier stocat pe dispozitiv</string>
+    <string name="adauga_o_noua_notita">adauga o noua notita</string>
+    <string name="adauga_notita">Adauga Notita</string>
+    <string name="adauga_in_baza_de_date">Adauga in baza de date</string>
+    <string name="adauga_in_fisier">Adauga in fisier</string>
+    <string name="arata_ce_avem_in_fisier">Arata ce avem in fisier.</string>
 </resources>

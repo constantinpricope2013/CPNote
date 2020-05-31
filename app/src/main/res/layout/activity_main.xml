@@ -18,6 +18,14 @@
     <ListView
         android:id="@+id/lvRss"
         android:layout_width="match_parent"
-        android:layout_height="618dp" />
+        android:layout_height="400dp">
+
+    </ListView>
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.constantinpricope.cpnote.DataTime"
+        android:layout_width="match_parent"
+        android:layout_height="59dp" />
 
 </LinearLayout>

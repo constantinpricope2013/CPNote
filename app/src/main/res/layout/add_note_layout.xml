@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adauga_o_noua_notita_in_casuta_de_mai_jos_pentru_a_fi_salvata_in_baza_de_date_sau_intr_un_fisier_stocat_pe_dispozitiv" />
+
+    <EditText
+        android:id="@+id/notita"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/adauga_o_noua_notita"
+        android:inputType="textPersonName"
+        android:singleLine="false" />
+
+    <Button
+        android:id="@+id/button_add_to_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adauga_in_baza_de_date" />
+
+    <Button
+        android:id="@+id/button_add_to_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adauga_in_fisier" />
+
+    <Button
+        android:id="@+id/button_show_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/arata_ce_avem_in_fisier" />
+
+    <TextView
+        android:id="@+id/textViewDisplayFile"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+</LinearLayout>

@@ -3,13 +3,34 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:text="@string/textview"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="291dp" />
+
+    <ListView
+        android:id="@+id/notes_list"
+        android:layout_width="match_parent"
+        android:layout_height="304dp" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.constantinpricope.cpnote.DataTime"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        tools:layout="@layout/fragment_data_time" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addANewNote"
+        android:text="@string/adauga_notita" />
+
 </LinearLayout>
