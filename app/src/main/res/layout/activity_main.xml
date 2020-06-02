@@ -26,6 +26,6 @@
         android:id="@+id/fragment"
         android:name="com.constantinpricope.cpnote.DataTime"
         android:layout_width="match_parent"
-        android:layout_height="59dp" />
+        android:layout_height="151dp" />
 
 </LinearLayout>

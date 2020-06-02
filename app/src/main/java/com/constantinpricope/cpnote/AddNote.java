@@ -22,6 +22,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
+
 public class AddNote extends AppCompatActivity {
 
     Button button_add_to_database;
@@ -30,6 +31,8 @@ public class AddNote extends AppCompatActivity {
     TextView textViewDisplayFile;
     Context actualContext = this;
     EditText notita;
+    DataBaseInterface dataBaseInterface;
+    long i = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,11 +43,13 @@ public class AddNote extends AppCompatActivity {
         button_show_file = (Button) findViewById(R.id.button_show_file);
         textViewDisplayFile = (TextView) findViewById(R.id.textViewDisplayFile);
         notita = (EditText) findViewById(R.id.notita);
+        dataBaseInterface = new DataBaseInterface(this);
 
         button_show_file.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textViewDisplayFile.setText(readFromFile(actualContext));
+//                textViewDisplayFile.setText(dataBaseInterface.readFromDatabase("item0"));
             }
         });
 
@@ -53,6 +58,15 @@ public class AddNote extends AppCompatActivity {
             public void onClick(View v) {
                 String textToWrite = notita.getText().toString();
                 writeToFile(textToWrite, actualContext);
+            }
+        });
+
+        button_add_to_database.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String textToWrite = notita.getText().toString();
+                dataBaseInterface.writeToDatabase("item" + dataBaseInterface.getLast_id(), textToWrite);
+
             }
         });
     }

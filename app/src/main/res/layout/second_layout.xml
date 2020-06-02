@@ -23,7 +23,7 @@
         android:id="@+id/fragment2"
         android:name="com.constantinpricope.cpnote.DataTime"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
+        android:layout_height="122dp"
         tools:layout="@layout/fragment_data_time" />
 
     <Button

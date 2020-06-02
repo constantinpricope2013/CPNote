@@ -17,12 +17,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 
 public class SecondActivity  extends AppCompatActivity {
+    DataBaseInterface dataBaseInterface;
+    ArrayList<String> all_notes;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_layout);
+        all_notes= new ArrayList<String>();
 
 
         // Get the Intent that started this activity and extract the string
@@ -35,7 +40,19 @@ public class SecondActivity  extends AppCompatActivity {
 
         String result =  readFromFile(this);
 
-        textView.setText("File directory is :  " + this.getFilesDir() + "ce avem in fisier: " + result);
+        dataBaseInterface = new DataBaseInterface(this);
+
+        dataBaseInterface.writeToDatabase("item" + dataBaseInterface.getLast_id(), message);
+
+        textView.setText(message);
+        long i= dataBaseInterface.getLast_id();
+//        while(i>=0)
+//        {
+//            all_notes.add(dataBaseInterface.readFromDatabase("item"+i));
+//        }
+
+
+
     }
 
     public void writeToFile(String data, Context context) {
